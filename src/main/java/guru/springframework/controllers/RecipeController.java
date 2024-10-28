@@ -41,4 +41,11 @@ public class RecipeController {
         model.addAttribute("recipe", recipeService.findCommandById(Long.parseLong(id)));
         return "recipe/recipeform";
     }
+
+    @PostMapping
+    @RequestMapping("recipe/{id}/delete")
+    public String deleteRecipe(@PathVariable String id) {
+        recipeService.deleteById(Long.parseLong(id));
+        return "redirect:/";
+    }
 }
