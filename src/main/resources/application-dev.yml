@@ -1,0 +1,24 @@
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/sfg_dev
+    username: root
+    password: Swiss123#
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    database-platform: org.hibernate.dialect.MySQL8Dialect
+    database: mysql
+    show-sql: true
+    properties:
+      javax:
+        persistence:
+          schema-generation:
+            create-source: metadata
+            scripts:
+              action: create
+              create-target: prasad.sql
+
+
+
+
+
